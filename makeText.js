@@ -35,15 +35,15 @@ function generateText(text) {
   
   
   async function makeURLText(url) {
-    let resp;
+    let res;
   
     try {
-      resp = await axios.get(url);
+      res = await axios.get(url);
     } catch (error) {
       console.error(`Cannot read URL: ${url}: ${error}`);
       process.exit(1);
     }
-    generateText(resp.data)
+    generateText(res.data)
   }
   
   
